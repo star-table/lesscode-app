@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.polaris.lesscode.app.mapper.AppViewMapper">
+  <resultMap id="BaseResultMap" type="com.polaris.lesscode.app.entity.AppView">
+    <!--@mbg.generated-->
+    <!--@Table lc_app_view-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="org_id" jdbcType="BIGINT" property="orgId" />
+    <result column="app_id" jdbcType="BIGINT" property="appId" />
+    <result column="view_name" jdbcType="VARCHAR" property="viewName" />
+    <result column="config" jdbcType="VARCHAR" property="config" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="owner" jdbcType="BIGINT" property="owner" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="del_flag" jdbcType="TINYINT" property="delFlag" />
+    <result column="creator" jdbcType="BIGINT" property="creator" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="updator" jdbcType="BIGINT" property="updator" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, org_id, app_id, view_name, config, remark, `owner`, sort, version, del_flag,
+    creator, create_time, updator, update_time
+  </sql>
+</mapper>

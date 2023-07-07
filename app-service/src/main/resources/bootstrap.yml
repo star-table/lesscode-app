@@ -1,0 +1,68 @@
+server:
+  port: 10666
+  tomcat:
+    max-swallow-size: -1
+  compression:
+    enabled: true
+    min-response-size: 1024
+    mime-types: application/javascript,application/json,application/xml,text/html,text/xml,text/plain,text/css,image/*
+spring:
+  application: 
+    name: app
+  profiles:
+    active: ${SERVER_ENVIROMENT:local}
+  cloud:
+    nacos:
+      discovery:
+        namespace: ${REGISTER_NAMESPACE:public}
+        server-addr: ${REGISTER_HOST:127.0.0.1}:${REGISTER_PORT:8848}
+        username: ${REGISTER_USERNAME:}
+        password: ${REGISTER_PASSWORD:}
+        weight: ${DISCOVERY_WEIGHT:10}
+        ip: ${DISCOVERY_DOMAIN:}
+        metadata:
+          kind: http
+          version:
+      config:
+        namespace: ${REGISTER_NAMESPACE:public}
+        server-addr: ${REGISTER_HOST:127.0.0.1}:${REGISTER_PORT:8848}
+        username: ${REGISTER_USERNAME:}
+        password: ${REGISTER_PASSWORD:}
+        file-extension: yml
+        extension-configs:
+          - dataId: ${spring.application.name}.${spring.cloud.nacos.config.file-extension}
+  main:
+    allow-bean-definition-overriding: true
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 800
+      maxQueueSize: 2000
+      queueSizeRejectionThreshold: 2000
+  command:
+    default:
+      circuitBreaker:
+        enabled: false
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 1000
+        readTimeout: 15000
+        
+logging:
+  file:
+    path: ${LOG_PATH:/data/logs/lesscode-app}
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /app/v2/api-docs

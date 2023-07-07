@@ -1,0 +1,62 @@
+[
+  {
+    "hiddenId": 1000,
+    "hiddenFlg": false,
+    "remark": "登录-手机验证码登录隐藏"
+  },
+  {
+    "hiddenId": 1001,
+    "hiddenFlg": false,
+    "remark": "登录-立即注册隐藏"
+  },
+  {
+    "hiddenId": 1002,
+    "hiddenFlg": false,
+    "remark": "首页-组织切换隐藏"
+  },
+  {
+    "hiddenId": 1003,
+    "hiddenFlg": false,
+    "remark": "首页-新建组织隐藏"
+  },
+  {
+    "hiddenId": 1004,
+    "hiddenFlg": false,
+    "remark": "添加成员-邀请用户"
+  },
+  {
+    "hiddenId": 1005,
+    "hiddenFlg": true,
+    "remark": "主工作区-TAB页面"
+  },
+  {
+    "hiddenId": 1006,
+    "hiddenFlg": true,
+    "remark": "主工作区-TAB页面"
+  },
+  {
+    "hiddenId": 1007,
+    "hiddenFlg": true,
+    "remark": "主工作区-TAB页面"
+  },
+  {
+    "hiddenId": 1008,
+    "hiddenFlg": true,
+    "remark": "主工作区-TAB页面"
+  },
+  {
+    "hiddenId": 1009,
+    "hiddenFlg": true,
+    "remark": "主工作区-TAB页面"
+  },
+  {
+    "hiddenId": 1010,
+    "hiddenFlg": true,
+    "remark": "主工作区-TAB页面"
+  },
+  {
+    "hiddenId": 1011,
+    "hiddenFlg": true,
+    "remark": "主工作区-TAB页面"
+  }
+]
